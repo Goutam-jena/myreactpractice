@@ -1,8 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+
 function App() {
   return (
-    <div className="text-4xl text-red-500 font-bold">
-      Jay Jagannath 🙏
-    </div>
+    <BrowserRouter>
+      {/* MainLayout acts as the UI shell for our entire router application */}
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 
