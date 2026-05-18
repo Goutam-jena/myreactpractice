@@ -1,18 +1,22 @@
 import Navbar from "../components/Navbar";
+import CategoryBar from "../components/CategoryBar"; // Import the category bar
 import Footer from "../components/Footer";
 
 function MainLayout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* 1. Global Navbar at the top */}
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* 1. Main Application Header */}
       <Navbar />
 
-      {/* 2. Dynamic content wrapper in the middle */}
+      {/* 2. Sub-Header Category Navigation */}
+      <CategoryBar />
+
+      {/* 3. Main Dynamic Content Slots */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-6 md:p-8">
         {children}
       </main>
 
-      {/* 3. Global Footer at the bottom */}
+      {/* 4. Global Footer block */}
       <Footer />
     </div>
   );

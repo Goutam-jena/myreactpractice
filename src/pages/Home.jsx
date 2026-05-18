@@ -1,9 +1,16 @@
+import Hero from '../components/Hero';
+import ProductGrid from '../components/ProductGrid';
+
 function Home() {
   return (
-    <div>
-      <h2>Product Catalog</h2>
-      <p>This is where our product listing grid will display.</p>
+    <div className="space-y-8">
+      {/* 1. Promo / Branding Hero Section */}
+      <Hero />
+
+      {/* 2. Main Catalog Product Feed Display */}
+      <ProductGrid />
     </div>
   );
 }
+
 export default Home;
